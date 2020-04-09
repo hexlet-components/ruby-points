@@ -1,40 +1,25 @@
-# import {
-#   cons,
-#   car,
-#   cdr,
-#   toString as toStr,
-# } from '@hexlet/pairs';
+# frozen_string_literal: true
 
-# /**
-#  * Make a point
-#  * @example
-#  * const point = makePoint(4, 5);
-#  */
-# export const makePoint = (x, y) => cons(x, y);
+require 'pairs'
 
-# /**
-#  * Get X
-#  * @example
-#  * const point = makePoint(4, 5);
-#  * getX(point); // 4
-#  */
-# export const getX = (point) => car(point);
+module Points
+  def self.make(x, y)
+    pairs.cons(x, y)
+  end
 
-# /**
-#  * Get Y
-#  * @example
-#  * const point = makePoint(8, -2);
-#  * getY(point); // -2
-#  */
-# export const getY = (point) => cdr(point);
+  def self.get_x(point)
+    pairs.car(point)
+  end
 
-# /**
-#  * Convert point to string
-#  * @example
-#  * const point = makePoint(0, 10);
-#  * toString(point); // (0, 10)
-#  */
-# export const toString = (point) => toStr(point);
+  def self.get_y(point)
+    pairs.cdr(point)
+  end
+
+  def self.to_string(point)
+    pairs.to_string(point)
+  end
+end
+
 
 # /**
 #  * Determine quadrant for given point
