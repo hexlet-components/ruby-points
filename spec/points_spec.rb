@@ -2,7 +2,7 @@
 
 require 'points'
 
-RSpec.describe Points do
+RSpec.describe Point do
   it '#make' do
     point = Point.make(3, 4)
     expect(Point.get_x(point)).to eq(3)
