@@ -1,49 +1,38 @@
 # frozen_string_literal: true
 
+require 'bundler/setup'
 require 'pairs'
 
-module Points
+module Point
   def self.make(x, y)
-    pairs.cons(x, y)
+    Pairs.cons(x, y)
   end
 
   def self.get_x(point)
-    pairs.car(point)
+    Pairs.car(point)
   end
 
   def self.get_y(point)
-    pairs.cdr(point)
+    Pairs.cdr(point)
   end
 
   def self.to_string(point)
-    pairs.to_string(point)
+    Pairs.to_string(point)
+  end
+
+  def self.get_quadrant(point)
+    x = get_x(point)
+    y = get_y(point)
+    if x > 0 and y > 0
+      1
+    elsif x < 0 and y > 0
+      2
+    elsif x < 0 and y < 0
+      3
+    elsif x > 0 and y < 0
+      4
+    else
+      nil
+    end
   end
 end
-
-
-# /**
-#  * Determine quadrant for given point
-#  * @example
-#  * quadrant(makePoint(5, 0)); // null
-#  * quadrant(makePoint(1, 5)); // 1
-#  * quadrant(makePoint(-3, 10)); // 2
-#  */
-# export const quadrant = (point) => {
-#   const x = getX(point);
-#   const y = getY(point);
-
-#   if (x > 0 && y > 0) {
-#     return 1;
-#   }
-#   if (x < 0 && y > 0) {
-#     return 2;
-#   }
-#   if (x < 0 && y < 0) {
-#     return 3;
-#   }
-#   if (x > 0 && y < 0) {
-#     return 4;
-#   }
-
-#   return null;
-# };
