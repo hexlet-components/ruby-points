@@ -23,16 +23,14 @@ module Point
   def self.get_quadrant(point)
     x = get_x(point)
     y = get_y(point)
-    if x > 0 and y > 0
+    if x.positive? && y.positive?
       1
-    elsif x < 0 and y > 0
+    elsif x.negative? && y.positive?
       2
-    elsif x < 0 and y < 0
+    elsif x.negative? && y.negative?
       3
-    elsif x > 0 and y < 0
+    elsif x.positive? && y.negative?
       4
-    else
-      nil
     end
   end
 end
