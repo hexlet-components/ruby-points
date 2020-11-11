@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'bundler/setup'
 require 'pairs'
 
@@ -23,14 +21,15 @@ module Point
   def self.get_quadrant(point)
     x = get_x(point)
     y = get_y(point)
-    if x.positive? && y.positive?
-      1
-    elsif x.negative? && y.positive?
-      2
-    elsif x.negative? && y.negative?
-      3
-    elsif x.positive? && y.negative?
-      4
+
+    if x.positive?
+      return 1 if y.positive?
+      return 4 if y.negative?
+    end
+
+    if x.negative?
+      return 2 if y.positive?
+      return 3 if y.negative?
     end
   end
 end
