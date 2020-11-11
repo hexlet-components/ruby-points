@@ -2,7 +2,8 @@
 
 source 'https://rubygems.org'
 
-gem 'rspec'
-gem 'rubocop'
+gem 'rspec', '~> 3.10'
 
-gem 'pairs', '0.0.1', git: 'https://github.com/hexlet-components/ruby-pairs'
+gem 'rubocop', '~> 1.1'
+
+gem 'pairs', '0.1.0', git: 'https://github.com/hexlet-components/ruby-pairs'

@@ -1,8 +1,8 @@
 install:
-	bundler install
-
-lint:
-	rubocop
+	bundle install
 
 test:
-	rspec
+	bundle exec rspec
+
+lint:
+	bundle exec rubocop .
