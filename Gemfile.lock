@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hexlet-points (1.0.0)
+    hexlet-points (1.0.1)
 
 GEM
   remote: https://rubygems.org/
