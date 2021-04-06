@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - "vendor/**/*"
+    - hexlet-points.gemspec
   NewCops: enable
 
 Style/FrozenStringLiteralComment:

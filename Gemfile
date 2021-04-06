@@ -1,9 +1,11 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
+
+gemspec
 
 gem 'rspec', '~> 3.10'
 
-gem 'rubocop', '~> 1.1'
+gem 'rubocop', '~> 1.12.1'
 
-gem 'pairs', '0.1.0', git: 'https://github.com/hexlet-components/ruby-pairs'
+gem 'rubocop-rspec', '~> 2.2.0'
+
+gem 'hexlet-pairs', '~> 1.1.0'
