@@ -1,6 +1,12 @@
-# ruby-pairs
+# ruby-points
 
 [![github action status](https://github.com/hexlet-components/ruby-points/workflows/CI/badge.svg)](https://github.com/hexlet-components/ruby-points/actions)
+
+## Install
+
+```sh
+gem install hexlet-points
+```
 
 ## Usage example
 
