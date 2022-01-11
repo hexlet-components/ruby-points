@@ -2,7 +2,7 @@ require_relative 'lib/points/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hexlet-points"
-  spec.version       = Point::VERSION
+  spec.version       = Points::VERSION
   spec.authors       = ["Hexlet"]
   spec.email         = ["info@hexlet.io"]
 
