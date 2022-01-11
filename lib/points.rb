@@ -1,7 +1,7 @@
 require 'bundler/setup'
 require 'pairs'
 
-module Point
+module Points
   def self.make(x, y)
     Pairs.cons(x, y)
   end

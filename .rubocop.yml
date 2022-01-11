@@ -12,3 +12,4 @@ Naming/MethodParameterName:
   Enabled: false
 Style/GuardClause:
   Enabled: false
+
