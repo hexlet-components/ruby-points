@@ -29,7 +29,8 @@ module Points
 
     if x.negative?
       return 2 if y.positive?
-      return 3 if y.negative?
+
+      3 if y.negative?
     end
   end
 end
