@@ -4,6 +4,6 @@ gemspec
 
 gem 'minitest-power_assert'
 
-gem 'rubocop', '~> 1.87'
+gem 'rubocop', '~> 1.88'
 
 gem 'hexlet-pairs', '~> 1.1.0'
