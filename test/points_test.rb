@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/points'
 require 'minitest'
 require 'minitest-power_assert'

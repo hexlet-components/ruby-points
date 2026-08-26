@@ -1,15 +1,22 @@
-AllCops:
-  Exclude:
-    - "vendor/**/*"
-    - hexlet-points.gemspec
-  NewCops: enable
+# Дефолт rubocop: правила руками не выбираются и руками не правятся.
+plugins:
+  - rubocop-minitest
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-Style/Documentation:
-  Enabled: false
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "**/vendor/**/*"
+    - "**/node_modules/**/*"
+    - "**/tmp/**/*"
+
+# Отступления от дефолта. Каждое с причиной: без причины правило не отключается.
+
+# Библиотека про точки на плоскости, и `x` с `y` это имена из предмета, а не
+# сокращения. Публичный API гема их и повторяет: get_x, get_y.
 Naming/MethodParameterName:
   Enabled: false
-Style/GuardClause:
-  Enabled: false
 
+# Учебный тест показывает всю механику пары подряд, и дробить его на проверку
+# в примере значит спрятать то, что он демонстрирует.
+Minitest/MultipleAssertions:
+  Enabled: false

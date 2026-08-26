@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require 'bundler/setup'
 require 'pairs'
 
+# Точка на плоскости, собранная из пары: конструктор make и селекторы
+# get_x и get_y.
 module Points
   def self.make(x, y)
     Pairs.cons(x, y)
@@ -27,10 +31,9 @@ module Points
       return 4 if y.negative?
     end
 
-    if x.negative?
-      return 2 if y.positive?
+    return unless x.negative?
+    return 2 if y.positive?
 
-      3 if y.negative?
-    end
+    3 if y.negative?
   end
 end
