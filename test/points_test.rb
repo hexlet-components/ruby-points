@@ -17,7 +17,7 @@ class PointsTest < Minitest::Test
     assert { Points.to_string(point) == '(10, -10)' }
   end
 
-  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable-next Metrics/AbcSize
   def test_get_quadrant
     assert { Points.get_quadrant(Points.make(0, 0)).nil? }
     assert { Points.get_quadrant(Points.make(5, 0)).nil? }
@@ -27,5 +27,4 @@ class PointsTest < Minitest::Test
     assert { Points.get_quadrant(Points.make(-2, -5)) == 3 }
     assert { Points.get_quadrant(Points.make(4, -1)) == 4 }
   end
-  # rubocop:enable Metrics/AbcSize
 end
